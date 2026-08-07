@@ -8,7 +8,7 @@
 <meta property="og:title" content="Rich in Life Podcast">
 <meta property="og:description" content="A podcast about what actually counts as winning. Most interviews stop at the resume. Rich in Life goes further.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="IMG_9162.jpg">
+<meta property="og:image" content="IMG_9162%202.jpeg">
 <link rel="icon" href="Rich-in-Life-Podcast-logo-vector.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -359,6 +359,15 @@ header.nav{
 .member-ph img{width:100%;height:100%;object-fit:cover;object-position:center 22%;filter:saturate(.8);transition:transform .7s cubic-bezier(.2,.7,.3,1),filter .4s}
 .member:hover .member-ph img{transform:scale(1.06);filter:saturate(1)}
 .member-ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(2,8,23,.82))}
+.member-ph.noimg{display:grid;place-items:center;
+  background:radial-gradient(circle at 50% 34%, rgba(43,116,240,.4), transparent 62%),linear-gradient(160deg,#0e3b96,#061a45 62%,#03102e)}
+.member-ph.noimg::after{display:none}
+.member-ph .init{
+  font-size:2.9rem;font-weight:800;letter-spacing:-.04em;line-height:1;
+  width:104px;height:104px;border-radius:50%;display:grid;place-items:center;
+  border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);
+}
+.member-ph .init span{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .member-body{padding:24px 24px 28px}
 .member-body h3{font-size:1.1rem;font-weight:700;margin-bottom:7px}
 .member-role{font-size:.63rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-400);margin-bottom:14px}
@@ -468,7 +477,8 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:56px 0 46px;background
 <!-- ===================== HERO ===================== -->
 <section class="hero" id="top">
   <div class="hero-bg">
-    <img src="IMG_9162.jpg" alt="Bold Studio, Chapel Hill" loading="eager">
+    <img id="heroImg" src="IMG_9162%202.jpeg" alt="Bold Studio, Chapel Hill" loading="eager"
+         data-fallbacks="IMG_9162.jpeg,IMG_9134.jpeg,IMG_9139.jpeg,IMG_9130.jpeg">
   </div>
   <div class="wrap">
     <div class="lockup">
@@ -613,7 +623,8 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:56px 0 46px;background
         </div>
       </div>
       <div class="studio-hero rv">
-        <img src="IMG_9162.jpg" alt="Inside the Bold Studio in Chapel Hill" loading="lazy">
+        <img src="IMG_9139.jpeg" alt="Inside the Bold Studio in Chapel Hill" loading="lazy"
+             data-fallbacks="IMG_9134.jpeg,IMG_9130.jpeg,IMG_9126.jpeg,IMG_9122.jpeg">
       </div>
     </div>
     <div class="gal rv">
@@ -623,6 +634,12 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:56px 0 46px;background
       <a href="#" data-full="IMG_9126.jpeg"><img src="IMG_9126.jpeg" alt="Bold Studio interior" loading="lazy"></a>
       <a href="#" data-full="IMG_9130.jpeg"><img src="IMG_9130.jpeg" alt="Bold Studio interior" loading="lazy"></a>
       <a href="#" data-full="IMG_9133.jpeg"><img src="IMG_9133.jpeg" alt="Bold Studio interior" loading="lazy"></a>
+      <a href="#" data-full="IMG_9134.jpeg"><img src="IMG_9134.jpeg" alt="Bold Studio interior" loading="lazy"></a>
+      <a href="#" data-full="IMG_9136.jpeg"><img src="IMG_9136.jpeg" alt="Bold Studio interior" loading="lazy"></a>
+      <a href="#" data-full="IMG_9142.jpeg"><img src="IMG_9142.jpeg" alt="Bold Studio interior" loading="lazy"></a>
+      <a href="#" data-full="IMG_9144.jpeg"><img src="IMG_9144.jpeg" alt="Bold Studio interior" loading="lazy"></a>
+      <a href="#" data-full="IMG_9148.jpeg"><img src="IMG_9148.jpeg" alt="Bold Studio interior" loading="lazy"></a>
+      <a href="#" data-full="IMG_9150.jpeg"><img src="IMG_9150.jpeg" alt="Bold Studio interior" loading="lazy"></a>
     </div>
   </div>
 </section>
@@ -636,7 +653,7 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:56px 0 46px;background
     </div>
     <div class="grid-4">
       <article class="member rv">
-        <div class="member-ph"><img src="Chris_Headshot.jpg" alt="Chris Ehrenfeld" loading="lazy"></div>
+        <div class="member-ph" data-initials="CE"><img src="Chris_Headshot.jpg" alt="Chris Ehrenfeld" loading="lazy"></div>
         <div class="member-body">
           <h3>Chris Ehrenfeld</h3>
           <div class="member-role">Host</div>
@@ -644,7 +661,8 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:56px 0 46px;background
         </div>
       </article>
       <article class="member rv">
-        <div class="member-ph"><img src="IMG_9134.jpeg" alt="Lara Casey Isaacson" loading="lazy"></div>
+        <div class="member-ph" data-initials="LC"><img src="Lara.png" alt="Lara Casey Isaacson" loading="lazy"
+             data-fallbacks="Lara.jpg,Lara.jpeg,Lara_Headshot.jpg"></div>
         <div class="member-body">
           <h3>Lara Casey Isaacson</h3>
           <div class="member-role">Co-Host</div>
@@ -652,7 +670,8 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:56px 0 46px;background
         </div>
       </article>
       <article class="member rv">
-        <div class="member-ph"><img src="IMG_9136.jpeg" alt="Claire Rose" loading="lazy"></div>
+        <div class="member-ph" data-initials="CR"><img src="claire.jpeg" alt="Claire Rose" loading="lazy"
+             data-fallbacks="claire.avif,claire.jpg,claire.png"></div>
         <div class="member-body">
           <h3>Claire Rose</h3>
           <div class="member-role">Production Coordinator</div>
@@ -660,7 +679,8 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:56px 0 46px;background
         </div>
       </article>
       <article class="member rv">
-        <div class="member-ph"><img src="IMG_9139.jpeg" alt="Chris Mann" loading="lazy"></div>
+        <div class="member-ph" data-initials="CM"><img src="ChrisMann.jpg" alt="Chris Mann" loading="lazy"
+             data-fallbacks="Chris_Mann.jpg,ChrisMann.png,ChrisMann.jpeg"></div>
         <div class="member-body">
           <h3>Chris Mann</h3>
           <div class="member-role">Producer</div>
@@ -805,9 +825,46 @@ document.querySelectorAll('.card').forEach(card=>{
   document.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
 })();
 
-/* hide any image that fails to load so the layout stays clean */
+/* ---- image fallback engine ----------------------------------------------
+   Any <img data-fallbacks="a.jpg,b.jpg"> walks the list until one loads.
+   Team photos that exhaust the list collapse to a gold initials tile.
+   Gallery images that fail are removed so the grid stays even.          */
+document.querySelectorAll('img[data-fallbacks]').forEach(im=>{
+  im.dataset.fbIndex = '0';
+  im.addEventListener('error', function onErr(){
+    const list = (im.dataset.fallbacks||'').split(',').map(s=>s.trim()).filter(Boolean);
+    let i = parseInt(im.dataset.fbIndex,10);
+    if(i < list.length){ im.dataset.fbIndex = String(i+1); im.src = list[i]; }
+    else { im.removeEventListener('error', onErr); im.dispatchEvent(new Event('exhausted')); }
+  });
+});
+
+/* team photos → initials tile when no file resolves */
+document.querySelectorAll('.member-ph').forEach(ph=>{
+  const im = ph.querySelector('img');
+  if(!im) return;
+  const bail = ()=>{
+    ph.classList.add('noimg');
+    im.remove();
+    if(!ph.querySelector('.init')){
+      const d=document.createElement('div');
+      d.className='init';
+      d.innerHTML='<span>'+(ph.dataset.initials||'')+'</span>';
+      ph.appendChild(d);
+    }
+  };
+  im.addEventListener('exhausted', bail);
+  if(!im.dataset.fallbacks) im.addEventListener('error', bail);
+});
+
+/* gallery: drop any tile that fails so the row stays even */
 document.querySelectorAll('.gal img').forEach(im=>{
   im.addEventListener('error',()=>{ im.closest('a').style.display='none'; });
+});
+
+/* images that already failed before these listeners attached get re-kicked */
+document.querySelectorAll('img').forEach(im=>{
+  if(im.complete && im.naturalWidth === 0) im.dispatchEvent(new Event('error'));
 });
 
 /* guest form — swap this handler for your form endpoint (Netlify Forms, Formspree, etc.) */
