@@ -288,7 +288,7 @@ header.nav{
 }
 @media(max-width:880px){.host-in{grid-template-columns:1fr}}
 .host-photo{position:relative;min-height:460px;overflow:hidden;background:linear-gradient(160deg,#0e3b96,#061a45 60%,#03102e)}
-.host-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%;transition:transform 1.1s cubic-bezier(.2,.7,.3,1)}
+.host-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;transition:transform 1.1s cubic-bezier(.2,.7,.3,1)}
 .host-in:hover .host-photo img{transform:scale(1.05)}
 .host-photo::after{
   content:"";position:absolute;inset:0;
@@ -477,16 +477,13 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:56px 0 46px;background
 <!-- ===================== HERO ===================== -->
 <section class="hero" id="top">
   <div class="hero-bg">
-    <img id="heroImg" src="IMG_9162%202.jpeg" alt="Bold Studio, Chapel Hill" loading="eager"
-         data-fallbacks="IMG_9162.jpeg,IMG_9134.jpeg,IMG_9139.jpeg,IMG_9130.jpeg">
+    <img id="heroImg" src="IMG_9126.jpeg" alt="Bold Studio, Chapel Hill" loading="eager"
+         data-fallbacks="IMG_9130.jpeg,IMG_9125.jpeg,IMG_9122.jpeg">
   </div>
   <div class="wrap">
     <div class="lockup">
       <img class="hero-logo" src="Rich-in-Life-Podcast-logo-vector.svg" alt="Rich in Life Podcast"
            onerror="this.outerHTML='&lt;div class=\'wordmark\'&gt;&lt;span class=\'w\'&gt;RICH&lt;/span&gt;&lt;span class=\'script\'&gt;in&lt;/span&gt;&lt;span class=\'w\'&gt;LIFE&lt;/span&gt;&lt;/div&gt;'">
-      <div class="lock-sub">
-        <i class="rule"></i><span>Podcast</span><i class="rule r2"></i>
-      </div>
     </div>
 
     <h1 class="hero-h1">A podcast about what actually counts as <b>winning.</b></h1>
@@ -594,8 +591,9 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:56px 0 46px;background
     </div>
     <div class="host-in rv">
       <div class="host-photo">
-        <img src="Chris_Headshot.jpg" alt="Chris Ehrenfeld, host of Rich in Life Podcast" loading="lazy">
-        <div class="host-cap">Chapel Hill, North Carolina</div>
+        <img src="IMG_9162%202.jpeg" alt="Chris Ehrenfeld in the Bold Studio, Chapel Hill" loading="lazy"
+             data-fallbacks="IMG_9162.jpeg,Chris_Headshot.jpg">
+        <div class="host-cap">Bold Studio — Chapel Hill, North Carolina</div>
       </div>
       <div class="host-body">
         <h2>Chris Ehrenfeld</h2>
@@ -628,14 +626,11 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:56px 0 46px;background
       </div>
     </div>
     <div class="gal rv">
-      <a href="#" data-full="IMG_9121.jpeg"><img src="IMG_9121.jpeg" alt="Bold Studio interior" loading="lazy"></a>
       <a href="#" data-full="IMG_9122.jpeg"><img src="IMG_9122.jpeg" alt="Bold Studio interior" loading="lazy"></a>
-      <a href="#" data-full="IMG_9125.jpeg"><img src="IMG_9125.jpeg" alt="Bold Studio interior" loading="lazy"></a>
       <a href="#" data-full="IMG_9126.jpeg"><img src="IMG_9126.jpeg" alt="Bold Studio interior" loading="lazy"></a>
       <a href="#" data-full="IMG_9130.jpeg"><img src="IMG_9130.jpeg" alt="Bold Studio interior" loading="lazy"></a>
       <a href="#" data-full="IMG_9133.jpeg"><img src="IMG_9133.jpeg" alt="Bold Studio interior" loading="lazy"></a>
       <a href="#" data-full="IMG_9134.jpeg"><img src="IMG_9134.jpeg" alt="Bold Studio interior" loading="lazy"></a>
-      <a href="#" data-full="IMG_9136.jpeg"><img src="IMG_9136.jpeg" alt="Bold Studio interior" loading="lazy"></a>
       <a href="#" data-full="IMG_9142.jpeg"><img src="IMG_9142.jpeg" alt="Bold Studio interior" loading="lazy"></a>
       <a href="#" data-full="IMG_9144.jpeg"><img src="IMG_9144.jpeg" alt="Bold Studio interior" loading="lazy"></a>
       <a href="#" data-full="IMG_9148.jpeg"><img src="IMG_9148.jpeg" alt="Bold Studio interior" loading="lazy"></a>
