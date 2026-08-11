@@ -432,7 +432,19 @@ header.nav{
 }
 @media(max-width:900px){.bl-in{grid-template-columns:1fr}}
 .bl-copy h2{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:800;margin-bottom:20px}
-.bl-copy p{color:var(--ink-dim);font-weight:300;font-size:.98rem;margin-bottom:30px}
+.bl-copy p{color:var(--ink-dim);font-weight:300;font-size:.98rem;margin-bottom:16px}
+.bl-cadence{
+  font-size:.88rem!important;color:var(--ink-faint)!important;
+  padding-left:16px;border-left:2px solid rgba(233,194,126,.45);margin-bottom:30px!important;
+}
+.bl-gets{
+  grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+  margin-top:8px;padding-top:34px;border-top:1px solid var(--hair);
+}
+@media(max-width:900px){.bl-gets{grid-template-columns:1fr 1fr;gap:22px}}
+@media(max-width:540px){.bl-gets{grid-template-columns:1fr}}
+.get h4{font-size:.95rem;font-weight:700;margin-bottom:9px;color:var(--ice-100)}
+.get p{font-size:.84rem;color:var(--ink-dim);font-weight:300;line-height:1.62}
 .bl-shot{display:block;border-radius:var(--r-md);overflow:hidden;
   border:1px solid var(--hair-2);box-shadow:var(--shadow-lift);
   transition:transform .45s cubic-bezier(.2,.7,.3,1),border-color .45s}
@@ -776,8 +788,9 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:56px 0 46px;background
       <div class="bl-copy">
         <div class="eyebrow">The Bold Life</div>
         <h2>What does it mean to be <span class="gold-text">rich in life?</span></h2>
-        <p>Chris writes about it every week — money stories, identity shifts, and what wealth is actually for. Essays, notes, and the archive live at The Bold Life.</p>
-        <a href="https://www.bold-life.com/" target="_blank" rel="noopener" class="btn btn-gold">Read more at bold-life.com →</a>
+        <p>The BOLD Life is about getting rich in life, not just money. Chris writes on wealth, purpose, health, family, and how to avoid the drift that quietly steals people's lives.</p>
+        <p class="bl-cadence">One post a week. No fluff — just lessons, stories, and strategies that actually work.</p>
+        <a href="https://www.bold-life.com/" target="_blank" rel="noopener" class="btn btn-gold">Subscribe free at bold-life.com →</a>
       </div>
       <a class="bl-shot" href="https://www.bold-life.com/" target="_blank" rel="noopener" aria-label="Visit The Bold Life">
         <div class="bl-chrome"><i></i><i></i><i></i><span>bold-life.com</span></div>
@@ -790,6 +803,25 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:56px 0 46px;background
           </div>
         </div>
       </a>
+
+      <div class="bl-gets">
+        <div class="get">
+          <h4>Financial insights that work</h4>
+          <p>Real-world strategies from decades of building wealth through real estate and business.</p>
+        </div>
+        <div class="get">
+          <h4>Real behind-the-scenes</h4>
+          <p>Honest accounts of wins, mistakes, and the wisdom they hold.</p>
+        </div>
+        <div class="get">
+          <h4>A bigger picture</h4>
+          <p>Going beyond money to align wealth with purpose, family, and legacy.</p>
+        </div>
+        <div class="get">
+          <h4>Clarity and action</h4>
+          <p>Tools to make smarter financial decisions and live boldly today.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
