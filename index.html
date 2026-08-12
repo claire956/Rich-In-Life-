@@ -426,6 +426,8 @@ header.nav{
 }
 .errmsg.show{display:block}
 .errmsg a{color:#ffd4d4;text-decoration:underline}
+.fielderr{display:none;margin-top:8px;font-size:.74rem;font-weight:300;color:#ffb3b3}
+.fielderr.show{display:block}
 /* ============================================================
    BOLD LIFE BAND
    ============================================================ */
@@ -751,6 +753,7 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:56px 0 46px;background
             <div class="field">
               <label for="g-email">Email</label>
               <input id="g-email" name="email" type="email" placeholder="you@company.com" required>
+              <div class="fielderr" id="emailErr">Please enter a valid email address so we can reply.</div>
             </div>
           </div>
           <div class="field">
@@ -920,9 +923,26 @@ document.querySelectorAll('img').forEach(im=>{
 document.getElementById('guestForm').addEventListener('submit',function(e){
   e.preventDefault();
   const form = this;
+  const emailField = document.getElementById('g-email');
+  const emailErr = document.getElementById('emailErr');
+
+  /* clear any styling left over from a previous failed attempt */
+  form.querySelectorAll('input,textarea,select').forEach(f=>f.style.borderColor='');
+  emailErr.classList.remove('show');
+
   const req=[...form.querySelectorAll('[required]')];
   const bad=req.find(f=>!f.value.trim());
   if(bad){ bad.focus(); bad.style.borderColor='rgba(255,120,120,.7)'; return; }
+
+  /* The form carries novalidate, so the browser's type="email" check never
+     runs. Without this, "Rose" is an acceptable email address — which both
+     loses the reply-to and gets the whole submission flagged as spam. */
+  if(!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(emailField.value.trim())){
+    emailField.focus();
+    emailField.style.borderColor='rgba(255,120,120,.7)';
+    emailErr.classList.add('show');
+    return;
+  }
 
   const btn = form.querySelector('button[type=submit]');
   const label = btn.textContent;
